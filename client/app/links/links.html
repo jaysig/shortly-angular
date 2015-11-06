@@ -1,4 +1,9 @@
 <div id='container' ng-controller="LinksController">
   <!-- Your html here -->
-
+  <h3 ng-if="!links.length">Go create some links</h3>
+  <ul>
+    <li ng-repeat="link in links">
+      <h3>{{ link.url}}</h3>
+    </li>
+  </ul>
 </div>
