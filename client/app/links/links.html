@@ -1,8 +1,9 @@
 <div id='container' ng-controller="LinksController">
   <!-- Your html here -->
+  <input type="text" class="link-search" ng-model="search" placeholder="search" > 
   <h3 ng-if="!links.length">Go create some links</h3>
   <ul>
-    <li ng-repeat="link in links">
+    <li ng-repeat="link in links | filter:search">
       <h3>{{ link.url}}</h3>
     </li>
   </ul>
