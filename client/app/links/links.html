@@ -1,6 +1,7 @@
+<input type="text" class="link-search" ng-model="search" placeholder="search" >
 <div id="container" ng-controller="LinksController" ng-init="getLinks()">
   <!-- Your html here -->
-  <input type="text" class="link-search" ng-model="search" placeholder="search" >
+
   <h3 ng-if="!data.length">Go create some links</h3>
   <ul>
     <li ng-repeat="link in data | filter:search">

@@ -2,7 +2,20 @@ angular.module('shortly.links', [])
 
 .controller('LinksController', function ($scope, Links) {
   // Your code here
-  angular.extend($scope, Links); //puts everything on the scope object
+  $scope.data = {};
+
+  $scope.getLinks = function() {
+    Links.getLinks()
+      .then(function(links) {
+        $scope.data.links = links;
+      })
+      .catch(function(err) {
+        console.error(err);
+      });
+  };
+
+  $scope.getLinks();
+  $scope.name = 'LinksController';
 })
 // .factory('Links',function(){
 //
