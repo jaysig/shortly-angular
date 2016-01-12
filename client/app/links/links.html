@@ -4,8 +4,9 @@
 
   <h3 ng-if="!data.length">Go create some links</h3>
   <ul>
-    <li ng-repeat="link in data | filter:search">
-      <h3>{{ link.url}}</h3>
+    <li ng-repeat="link in data.links | filter:search">
+      <div class="original">{{ link.url}}</div>
+      <h3></h3>
     </li>
   </ul>
 </div>

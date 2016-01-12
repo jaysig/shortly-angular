@@ -1,6 +1,10 @@
 <div id="container" ng-controller="ShortenController">
 <!-- Your code here -->
-  <input type="text" class="link-input" placeholder="new link" ng-model="newLink">
-  <!--  not sure where the model comes from-->
-  <button ng-click="addLink(newLink)">add</button>
+  <form name="shortlyForm" ng-submit="addLink()">
+    <input type="url" class="link-input" placeholder="new link" name="newLink" ng-model="link.url">
+
+    <button type="submit" value="Shorten">add</button>
+  </form>
+
+  <!-- <button ng-click="addLink(newLink)">add</button> -->
 </div>
